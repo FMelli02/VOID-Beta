@@ -42,6 +42,7 @@ class Producto(Base):
     descripcion = Column(Text, nullable=True)
     precio = Column(DECIMAL(10, 2), nullable=False)
     sku = Column(String(100), unique=True, nullable=False)
+    url = Column(String(100), unique=True, nullable=False)
     
     # La clave foránea: Conecta este producto con una fila de la tabla 'categorias'
     material = Column(String(100), nullable=True) # Agregamos el material del producto
