@@ -59,7 +59,7 @@ El backend necesita una base de datos MySQL para funcionar.
 1.  Abrí tu cliente de MySQL (MySQL Workbench, DBeaver, etc.).
 2.  Creá una nueva base de datos y sus tablas correspondientes (si no se crean automáticamente).
     ```sql
-    CREATE DATABASE void_db;
+    CREATE DATABASE void_db_sql;
     ```
     *Nota: Las tablas se deberían crear automáticamente al iniciar el backend por primera vez gracias al `lifespan` de FastAPI.*
 
@@ -118,7 +118,7 @@ Para correr el proyecto, necesitás tener **dos terminales abiertas**.
 .\venv\Scripts\activate
 
 # 2. Arrancar el servidor de FastAPI
-uvicorn backend.main:app --reload
+python -m uvicorn main:app --reload
 ```
 El backend estará corriendo en `http://localhost:8000`.
 
